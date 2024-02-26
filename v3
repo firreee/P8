@@ -40,3 +40,30 @@ def main():
     print('\n'*c)
     return
 main()
+
+
+def main():
+    a = 5.5
+    e = 2
+    b = 2
+    c = 2
+    
+    print('\n' * int(a))
+    AssessmentLevel = 0.10
+    HomeOwnerEx = 500.43
+    SeniorCEX = 357.45
+    PropertyValue = float(input('Enter value of property: '))
+    LocalTaxRate = float(input('Enter local tax rate: '))
+    StateEqualizer = float(input('Enter state equalizer rate: '))
+    print('\n' * e)
+    
+    AssessedValue = PropertyValue * AssessmentLevel
+    EqualizedValue = AssessedValue * StateEqualizer
+    PropertyTaxBefore = EqualizedValue * LocalTaxRate
+    TotalPropertyTax = PropertyTaxBefore - HomeOwnerEx - SeniorCEX
+    
+    print('\n' * b)
+    print('Property tax due:', TotalPropertyTax)
+    print('\n' * c)
+
+main()
