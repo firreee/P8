@@ -67,3 +67,29 @@ def main():
     print('\n' * c)
 
 main()
+
+def main():
+    a = 5
+    e = 1
+    b = 2
+    c = 2
+    
+    print('\n' * a)
+    AssessmentLevel = 0.10
+    HomeOwnerEx = 500.43
+    SeniorCEX = 357.45
+    PropertyValue = 258440
+    LocalTaxRate = 7.149
+    StateEqualizer = 2.8032
+    print('\n' * e)
+    
+    AssessedValue = PropertyValue * AssessmentLevel
+    EqualizedValue = AssessedValue * StateEqualizer
+    PropertyTaxBefore = EqualizedValue * LocalTaxRate
+    TotalPropertyTax = PropertyTaxBefore - HomeOwnerEx - SeniorCEX
+    
+    print('\n' * b)
+    print('Property tax due:', TotalPropertyTax)
+    print('\n' * c)
+
+main()
