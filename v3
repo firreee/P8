@@ -93,3 +93,54 @@ def main():
     print('\n' * c)
 
 main()
+
+# property tax program calculator 2
+def main():
+    nheac = 0.004
+    mwrdc = 0.406
+    pmab = 0.006
+    cpd = 0.362
+    MiscTax = nheac + mwrdc + pmab + cpd
+    
+    bec = 3.726
+    cccd = 0.169
+    SchoolTax = bec + cccd
+    
+    csbif = 0.128
+    clf = 0.122
+    city = 1.630
+    City = csbif + clf + city
+    
+    ccfpd = 0.063
+    cook = 0.316
+    ccps = 0.130
+    cchf = 0.087
+    CookCty = ccfpd + cook + ccps + cchf
+    
+    TotalTaxRate = MiscTax + SchoolTax + City + CookCty
+    LocalTaxRate = TotalTaxRate  # Extracting the local tax rate from the first program
+    
+    PropertyValue = 258440
+    StateEqualizer = 2.8032
+    
+    a = 5
+    e = 1
+    b = 2
+    c = 2
+    
+    print('\n' * a)
+    AssessmentLevel = 0.10
+    HomeOwnerEx = 500.43
+    SeniorCEX = 357.45
+    print('\n' * e)
+    
+    AssessedValue = PropertyValue * AssessmentLevel
+    EqualizedValue = AssessedValue * StateEqualizer
+    PropertyTaxBefore = EqualizedValue * LocalTaxRate
+    TotalPropertyTax = PropertyTaxBefore - HomeOwnerEx - SeniorCEX
+    
+    print('\n' * b)
+    print('Property tax due:', TotalPropertyTax)
+    print('\n' * c)
+
+main()
